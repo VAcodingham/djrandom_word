@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>random word generator</title>
+</head>
+<body>
+    <div class="container"> 
+        <h1>Random Word Generator</h1><br><br>
+        <h2>{{randomstr}}</h2>
+        <div>    
+            <h3>Get a Random Word</h3>
+        </div>
+        <a href="/redirect_random"><button>Click Here</button></a><br><br>
+        <p>Times you've refreshed: {{request.session.count}} </p>
+        <a href="/clear"   >Reset</a>
+    </div>
+    
+   
+</body>
+</html>
